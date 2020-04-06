@@ -1,4 +1,4 @@
-//
+// swift-tools-version:5.1
 //  Package.swift
 //  SwiftState
 //
@@ -9,5 +9,13 @@
 import PackageDescription
 
 let package = Package(
-    name: "SwiftState"
+    name: "SwiftState",
+    products: [
+       .library(name: "SwiftState", targets: ["SwiftState"])
+    ],
+    targets: [
+       .target(name: "SwiftState", path: "Sources"),
+        .testTarget(name: "SwiftStateTests", dependencies: ["SwiftState"])
+    ],
+    swiftLanguageVersions: [.v5]
 )

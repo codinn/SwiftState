@@ -90,8 +90,3 @@ public enum NoEvent: EventType
     {
     }
 }
-
-public func == (lhs: NoEvent, rhs: NoEvent) -> Bool
-{
-    return true
-}
